@@ -44,7 +44,7 @@ in the native font of `Compy`.
 ## Meet the Console
 
 After launching the **Compy IDE** app by double-clicking on 
-the corresponsing icon on Compy's **_desktop_**, one faces 
+the corresponding icon on Compy's **_desktop_**, one faces 
 Compy's **_console_**. The console is how wizards talk to 
 computers, in their own language. Unlike the desktop, which 
 is what muggles use to get the computer do what they need, 
@@ -182,7 +182,7 @@ sign are dark blue. The twos are purple. If you hit **Enter**,
 the computer dutifully writes `4` on the canvas.
 
 What happened here? The `4` is, as you might have guessed, 
-the **_evauluation_** of `2+2`. But what are all these 
+the **_evaluation_** of `2+2`. But what are all these 
 different colors? Red is reserved for things that do not 
 make any sense in Lua. Black denotes **_identifiers_**, 
 sequences of symbols (typically letters) that identify 

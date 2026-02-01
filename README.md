@@ -1,6 +1,8 @@
 # Become a Wizard
 
-*This is the user manual to Compy*
+*This is the manual to Compy computer, a project dedicated 
+to Steve Vickers, the author of the manual and the firmware 
+for the ZX Spectrum computer.*
 
 ## Introduction
 
@@ -130,3 +132,90 @@ is typed *without* the **Shift** key, while the top one is
 typed *with* it.
 
 Now you know enough to start chatting with Compy.
+
+## The Basics of Lua
+
+If you try to greet the computer by typing `Hello Compy!`, 
+you will notice that what you are typing is displayed in 
+red. This is the computer's tactful way of telling you it 
+does not understand a word you're saying. If you hit 
+**Enter**, it will actually tell you -- in English, red on 
+black -- what its actual problem is with what you have just 
+written, but at this point it probably makes little sense 
+to you, so just press any key to get back to typing in the 
+console.
+
+If you type `Draw.`, you'd notice that the word is now in 
+black, with only the dot being red. The computer does still 
+not understand what this is supposed to mean, though it 
+understands a bit more than last time. If you hit 
+**Enter**, the list of complaints is a lot shorter, though 
+still a bit cryptic.
+
+> **Note:** Even though the keywords and identifiers of Lua 
+> are mostly English words, *Lua is not English*. For the 
+> computer to understand what you type, it needs to be 
+> correct Lua, not correct English. For instance, in Lua, 
+> you do not end statements with a period.
+
+Now, let's try something that would actually make sense to 
+the computer. Type `print("Hello, World!")`. You'd notice 
+that `print` is displayed in black, the opening and closing 
+parentheses are dark blue, while the quoted text is green. 
+If you hit **Enter**, the computer will respond with
+```
+Hello, World!
+```
+on the canvas.
+
+> **Trivia:** Statements instructing the computer to answer 
+> us in writing begin with the word `print`. The reason for 
+> this is historical: computers got consoles before they 
+> became able to display anything on screens. In those 
+> days, the console's output was a roll of paper on which 
+> things were literally *print*ed. While this has no longer 
+> been the case for many decades now, the notation stuck.
+
+So let's try this: type `print(2+2)`. The word `print` is, 
+again, displayed in black. The parentheses and the plus 
+sign are dark blue. The twos are purple. If you hit **Enter**, 
+the computer dutifully writes `4` on the canvas.
+
+What happened here? The `4` is, as you might have guessed, 
+the **_evauluation_** of `2+2`. But what are all these 
+different colors? Red is reserved for things that do not 
+make any sense in Lua. Black denotes **_identifiers_**, 
+sequences of symbols (typically letters) that identify 
+something, much like *names*. In fact, wizards often use 
+the word "name" when they speak about identifiers. Blue 
+denotes Lua **_keywords_**, sequences of symbols (not 
+necessarily letters) that *cannot* be identifiers, as their 
+meaning is fixed in the Lua language. Green and purple are 
+used for **_literals_**, things that literally mean what 
+they say. Specifically, **_string_** literals meaning the 
+text enclosed in the quotes are displayed in green, 
+**_numeric_** literals meaning the number are displayed in 
+purple.
+
+So, now you can use the computer as a calculator.
+
+> **Note:** Computers are very fussy that you should 
+> distinguish between the digit zero and the letter O. To 
+> make it absolutely clear, zero appears on the screen as 
+> `0`, with a dot in the middle. You also need to distinguish 
+> between the digit one (`1`), the capital letter i (`I`) and 
+> the small letter L (`l`). All ten digits are on the second 
+> row of the keyboard. Furthermore, you must use the star 
+> (`*`) for multiplication, *not* the letter x.
+
+## Identifiers
+
+*"When **I** use a word", Humpty Dumpty said in rather a 
+scornful tone, "it means just what I choose it to mean -- 
+neither more nor less."
+
+-- Lewis Carroll: "Through the Looking Glass"*
+
+
+
+

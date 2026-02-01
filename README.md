@@ -139,8 +139,8 @@ If you try to greet the computer by typing `Hello Compy!`,
 you will notice that what you are typing is displayed in 
 red. This is the computer's tactful way of telling you it 
 does not understand a word you're saying. If you hit 
-**Enter**, it will actually tell you -- in English, red on 
-black -- what its actual problem is with what you have just 
+**Enter**, it will actually tell you — in English, red on 
+black — what its actual problem is with what you have just 
 written, but at this point it probably makes little sense 
 to you, so just press any key to get back to typing in the 
 console.
@@ -211,11 +211,8 @@ So, now you can use the computer as a calculator.
 ## Identifiers
 
 *"When **I** use a word", Humpty Dumpty said in rather a 
-scornful tone, "it means just what I choose it to mean -- 
-neither more nor less."
+scornful tone, "it means just what I choose it to mean — 
+neither more nor less."*
 
--- Lewis Carroll: "Through the Looking Glass"*
-
-
-
+*— Lewis Carroll: "Through the Looking Glass"*
 

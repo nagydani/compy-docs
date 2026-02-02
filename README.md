@@ -358,7 +358,7 @@ table to the identifier `my_table`:
 my_table = { }
 ```
 
-Now, we an add **_entries_** to the table:
+Now, we can add **_entries_** to the table:
 
 ```lua
 my_table[1] = "one"

@@ -31,7 +31,7 @@ you can look them up elsewhere or ask someone who knows
 what they mean. Framed texts are either **notes**, 
 providing additional information typically relating the 
 discussed topic to the broader context of the world beyond 
-Compy or trivia, interesting facts related to the discussed 
+Compy or **trivia**, interesting facts related to the discussed 
 topic, often providing a historical perspective or 
 **challenges**. The first word in the frame, set in **bold 
 regular** tells you which one that particular frame is. 
@@ -77,7 +77,7 @@ When you turn on your Compy, after about a minute, it
 brings up the Android home screen as its desktop, which is 
 probably familiar to you from countless interactions with 
 tablets and smartphones with the Android operating system. 
-Prominently on it, you find the **Compy IDE* icon, to which 
+Prominently on it, you find the **Compy IDE** icon, to which 
 you can point using either Compy's touchpad or the mouse 
 that comes with Compy. Unlike most Android devices, Compy's 
 screen is *not* touch sensitive. After double-clicking the 
@@ -110,7 +110,7 @@ shows you where what you type is going to appear. If you
 have already typed in anything, you can move the cursor 
 using the arrow keys. You can also delete what is *before* 
 the cursor (which is normally what you have typed last) by 
-hitting the **⟵** key int top right corner, just below a 
+hitting the **⟵** key in the top right corner, just below a 
 key marked **Delete**, which deletes what is *after* the 
 cursor.
 
@@ -215,4 +215,173 @@ scornful tone, "it means just what I choose it to mean —
 neither more nor less."*
 
 *— Lewis Carroll: "Through the Looking Glass"*
+
+Identifiers can mean anything. Whenever we want to *name 
+something*, we can **_assign_** an identifier. Identifier 
+assignment in Lua is done by using the equal sign (`=`) 
+with the identifier on its left and the value on its 
+right. For example, we can assign the identifier `two` the 
+numeric value `2` like this:
+
+```lua
+two = 2
+```
+
+After pressing **Enter**, we can immediately use this 
+identifier. Try this:
+
+```lua
+print(two + two)
+```
+
+As you can see, the computer now understands the new 
+identifier. In Lua, all unassigned identifiers have a 
+special value, `nil`, which in Lua means "nothing". Try 
+entering this:
+
+```lua
+print(nothing)
+```
+
+As you might have noticed, `print` is also just an 
+identifier. We can make some other identifier to mean the 
+same thing:
+
+```lua
+display = print
+```
+
+As you would expect, from now on, `display(two)` would 
+display `2`. Try it. We can even re-assign `print` to mean 
+something else entirely, but that could be very confusing. 
+You can try it now, but in the future, try not doing it 
+unless absolutely necessary.
+
+> **Note:** Identifiers are, indeed, completely arbitrary 
+> from the computer’s point of view. For a human mind, 
+> however, it is very difficult to let go of conventional 
+> meanings. Most programming languages, Lua very much 
+> included, are meant to be understandable by *both* 
+> computers and humans. Thus, in order not to confuse 
+> fellow wizards or ourselves in the future, it is 
+> strongly recommended to use meaningful identifiers. The 
+> art of choosing what and how to denote with identifiers 
+> is one of the most important skills of a wizard and is 
+> to be refined through experience over a lifetime.
+
+## Values
+
+So far, we have seen identifiers denote two kind of 
+things: **_numbers_** and **_functions_**, the latter 
+being things that do something, like `print`. We are going 
+to discuss them in much more detail a bit later. We 
+already know that they can also denote nothing (called `nil` 
+in Lua). What other things there are that can be assigned 
+an identifier?
+
+We have already had a glimpse of how textual information 
+is handled using **_strings_**. Let’s look into it in a 
+bit more detail. String literals can also be assigned to 
+identifiers, like this:
+
+```lua
+greeting = "Hello, World!"
+```
+
+After which `print(greeting)` displays the above assigned 
+greeting. There are also ways to describe strings other 
+than literals. For example, we can tie two strings 
+together (wizards call this **_concatenation_**) using the 
+double dot:
+
+```lua
+greetings = greeting..greeting
+```
+
+Now try `print(greetings)`. There are many more ways that 
+we will learn later.
+
+What if we want the computer to verify whether a statement 
+is true or not? Try `print(2 > 1)` and `print(2 < 1)`. As 
+expected, the result is `true` and `false`, respectively. 
+These are also values that can be assigned. They are 
+called **_boolean_** values, and there are only these two 
+of them.
+
+> **Note:** In Lua, `true` and `false` are keywords, not 
+> identifiers. They cannot be reassigned, they *always* 
+> mean the two boolean values.
+
+To verify whether or not two values are *equal*, we use 
+the double equal sign (`==`), since the single equal sign 
+is already taken to mean assignment. To verify whether or 
+not they are *unequal*, we use `~=`. These can be used for 
+any kind of value, not just numbers. To flip a boolean 
+value from `true` to `false` or from `false` to `true`, we 
+can use the keyword `not`. Try `print(not true)`.
+
+> **Challenge:** Before trying, guess what would be 
+> displayed by `print(not not true)`
+
+Unsurprisingly, `print(two ~= 2)` and `print(not two == 2)` 
+give the same result.
+
+> **Trivia:** Booleans are named after **George Boole**, 
+> the wizard that introduced the rigorous rules of 
+> **_binary_** (two-valued) logic almost two centuries 
+> ago. It is important to note that this is not the only 
+> possible logic, though it is the one used by the 
+> overwhelming majority of computer languages, so it is 
+> worth learning very well.
+>
+> One can also create similarly rigorous rules around 
+> **_ternary_** (three-valued) logic, where in addition to 
+> `true` and `false`, we also have `unknown` and build 
+> computers around it. In fact, it has been done in the 
+> past and may well be done in the future, but at present 
+> it out of fashion.
+
+These (`nil`, booleans, numbers, strings and functions) 
+are the only **_primitive_** value types in Lua, meaning 
+that all other values are composed of these. In Lua, there 
+is only one **_composite_** value type, the **_table_**, 
+in which the computer can look up a value using another 
+value. Tables are going to be discussed in a lot more 
+detail a bit later, but here is a glimpse of how they 
+work.
+
+An **_empty table_**, in which every lookup results in 
+`nil`, is denoted by `{ }`. Let’s assign an initially empty 
+table to the identifier `my_table`:
+
+```lua
+my_table = { }
+```
+
+Now, we an add **_entries_** to the table:
+
+```lua
+my_table[1] = "one"
+my_table[2] = "two"
+my_table[false] = 0
+my_table["foo"] = "bar"
+```
+
+All unassigned values are `nil`, as expected. Try 
+`print(my_table[1 + 1])`. The value in square brackets is 
+called **_key_** or **_index_** (these two words usually 
+mean the same thing in wizardry).
+
+> **Note:** With the exception of `nil`, all values can be 
+> used as a *key* in a table, including functions and 
+> tables, but using the latter two is highly unusual and 
+> can be very confusing. It is better avoided.
+
+In fact, Lua identifiers are just values in a table with 
+the identifier `_G` (underscore followed by capital G) 
+called the **_global table_**, where the keys are strings 
+holding the identifiers. You can check that 
+`print(_G["print"] == print)` actually prints true.
+
+Now you can understand identifiers.
 

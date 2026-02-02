@@ -381,7 +381,7 @@ In fact, Lua identifiers are just values in a table with
 the identifier `_G` (underscore followed by capital G) 
 called the **_global table_**, where the keys are strings 
 holding the identifiers. You can check that 
-`print(_G["print"] == print)` actually prints true.
+`print(_G["print"] == print)` actually prints `true`.
 
 Now you can understand identifiers.
 

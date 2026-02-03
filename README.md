@@ -385,3 +385,56 @@ holding the identifiers. You can check that
 
 Now you can understand identifiers.
 
+## Functions
+
+Functions are the essence of wizardry. One way to think 
+about functions is to imagine them as machines. They may 
+consume some values, called **_arguments_** of the 
+function, they may produce some values, called, well, the 
+(return) values of the function. And they can also have some 
+**_side effects_**.
+
+Functions come into existence by describing what they do: 
+what are their arguments and how their side effects and 
+values depend on them. Wizardry!
+
+So far, `print` is the only function with a name that we 
+have seen. It can have an arbitrary number of arguments. 
+It returns no values. Its most important side effect is 
+displaying all its arguments on the screen, separated by 
+whitespaces and beginning a new line at the end.
+
+We can describe our own functions with the `function` 
+keyword. Let's try an example which takes two arguments 
+and prints them below one another:
+
+```lua
+print2 = function(first, second) print(first) print(second) end
+```
+
+Try `print2("one", "two")`. What have we just done? The 
+command above is an *assignment*, assigning a value to the 
+identifier `print2`, which happens to be a function.
+
+The description of a function begins with the `function` 
+keyword and ends with the `end` keyword. After the 
+`function` keyword, we find a comma-separated list of 
+identifiers for the arguments in parentheses. When we 
+**_call_** the function, these identifiers will be 
+*temporarily* assigned the values of the function. After 
+the argument identifiers, a sequence of **_statements_** 
+follow, which are very similar to commands, except in that 
+they are not executed immediately. This is called the 
+**_body_** of the function.
+
+When we entered the command `print2("one", "two")`, we 
+have actually *called* `print2`. Calling a function is 
+denoted by putting a comma-separated list of arguments in 
+parentheses after he identifier of the function. If we 
+wish to call a function without supplying any arguments, 
+we follow the function identifier by an opening 
+parenthesis immediately followed by a closing one.
+
+> **Challenge:** Before trying, guess what `print2()` 
+> would display.
+

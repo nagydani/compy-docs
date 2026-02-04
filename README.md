@@ -28,16 +28,16 @@ In this book, the first uses of important terms are set in
 **_bold italic_**. Usually, you will find the explanation 
 of these terms somewhere around their first use. If not, 
 you can look them up elsewhere or ask someone who knows 
-what they mean. Framed texts are either **notes**, 
-providing additional information typically relating the 
-discussed topic to the broader context of the world beyond 
-Compy or **trivia**, interesting facts related to the discussed 
-topic, often providing a historical perspective or 
-**challenges**. The first word in the frame, set in **bold 
-regular** tells you which one that particular frame is. 
-Texts that you should see on the screen, such as keywords, 
-program line numbers, listings, reports and so on, are set 
-in the native font of `Compy`.
+what they mean. Framed texts are either **notes**, **fun 
+facts** or **challenges**. Notes provide additional 
+information typically relating the discussed topic to the 
+broader context of the world beyond Compy. Fun facts are 
+trivia related to the discussed topic, often providing a 
+historical perspective. Challenges are, well, challenges. 
+The first word in the frame, set in **bold regular** tells 
+you which one that particular frame is. Texts that you 
+should see on the screen, such as keywords, listings, 
+reports and so on, are set in the native font of `Compy`.
 
 *To be continued...*
 
@@ -85,6 +85,8 @@ icon with the *left* button of the mouse or the touchpad,
 the entire screen except the very bottom turns into muted 
 white.
 
+Start **Compy IDE**.
+
 You are using the console now, as indicated in the 
 beginning of the **_status line_**, that black stripe with 
 bright letters in it near the bottom of the screen. It is, 
@@ -131,6 +133,15 @@ are two symbols above one another on a key, the bottom one
 is typed *without* the **Shift** key, while the top one is 
 typed *with* it.
 
+Below the left **Shift** key, there is a key labeled 
+**Ctrl** (pronounced "Control") that is similar to 
+**Shift** in that it needs to be pressed down for 
+modifying what some other key does. For example, if you 
+feel like you messed up and want to get out of the 
+console, **DO NOT PANIC**: just press **Ctrl** + **Esc** 
+(pronounced "Escape"). If you launch **Compy IDE** again, 
+things will be back to normal.
+
 Now you know enough to start chatting with Compy.
 
 ## The Basics of Lua
@@ -168,7 +179,7 @@ Hello, World!
 ```
 on the canvas.
 
-> **Trivia:** Statements instructing the computer to answer 
+> **Fun fact:** Statements instructing the computer to answer 
 > us in writing begin with the word `print`. The reason for 
 > this is historical: computers got consoles before they 
 > became able to display anything on screens. In those 
@@ -219,8 +230,8 @@ neither more nor less."*
 Identifiers can mean anything. Whenever we want to *name 
 something*, we can **_assign_** an identifier. Identifier 
 assignment in Lua is done by using the equal sign (`=`) 
-with the identifier on its left and the value on its 
-right. For example, we can assign the identifier `two` the 
+with the identifier on its *left* and the value on its 
+*right*. For example, we can assign the identifier `two` the 
 numeric value `2` like this:
 
 ```lua
@@ -250,6 +261,12 @@ same thing:
 ```lua
 display = print
 ```
+
+> **Note:** What you put on which side of `=` is 
+> *important*. For example, the above example *cannot* be 
+> written as ~~`print = display`~~, because it would 
+> assign the value of `display` (which is currently `nil`) 
+> to `print`, thus making it impossible to use.
 
 As you would expect, from now on, `display(two)` would 
 display `2`. Try it. We can even re-assign `print` to mean 
@@ -326,7 +343,7 @@ can use the keyword `not`. Try `print(not true)`.
 Unsurprisingly, `print(two ~= 2)` and `print(not two == 2)` 
 give the same result.
 
-> **Trivia:** Booleans are named after **George Boole**, 
+> **Fun fact:** Booleans are named after **George Boole**, 
 > the wizard that introduced the rigorous rules of 
 > **_binary_** (two-valued) logic almost two centuries 
 > ago. It is important to note that this is not the only 

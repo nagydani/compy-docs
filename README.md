@@ -55,7 +55,7 @@ expressive than the desktop. Different computers might
 speak different languages on their console, but they are, 
 in many ways, similar.
 
-> **Note:** Truth be told, the console opened by this app 
+> **Note:** Truth be told, the console opened by **Compy IDE** 
 > is *not* the *actual* console of Compy, and unlike the 
 > latter, it *does* have certain limitations mainly to keep 
 > the user and the computer safe from each other. However, 
@@ -454,4 +454,12 @@ parenthesis immediately followed by a closing one.
 
 > **Challenge:** Before trying, guess what `print2()` 
 > would display.
+
+Assigning function identifiers is such a common thing to do 
+that there is a shorthand for it, which is how we are going 
+to write it in most cases:
+
+```lua
+function print2(first, second) print(first) print(second) end
+```
 

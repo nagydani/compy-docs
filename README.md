@@ -46,32 +46,20 @@ reports and so on, are set in the native font of `Compy`.
 After launching the **Compy IDE** app by double-clicking on 
 the corresponding icon on Compy's **_desktop_**, one faces 
 Compy's **_console_**. The console is how wizards talk to 
-computers, in their own language. Unlike the desktop, which 
-is what muggles use to get the computer do what they need, 
-the console allows you, in principle, to make the computer 
-do *anything* that the computer is capable of doing at all. 
-It might seem less fancy, but it is far more powerful and 
-expressive than the desktop. Different computers might 
-speak different languages on their console, but they are, 
-in many ways, similar.
-
-> **Note:** Truth be told, the console opened by **Compy IDE** 
-> is *not* the *actual* console of Compy, and unlike the 
-> latter, it *does* have certain limitations mainly to keep 
-> the user and the computer safe from each other. However, 
-> it is still enormously powerful, allowing everything one 
-> might need to develop video games and other fun and 
-> useful pieces of software.
+computers, in their own language.
 
 The language your Compy understands is called **_Lua_**, 
-which is Portuguese for "Moon". This is a word play, as it 
-is a direct descendant of another computer language called 
-Simple Object Language, or SOL for short, which, in turn, 
-means "Sun" in Portuguese. The creators of Lua lived in Rio 
-de Janeiro, Brazil and spoke Portuguese to one another. 
-There are many versions of Lua; ours is called [Lua 
-5.1](https://www.lua.org/manual/5.1/), which is one of the 
-most popular ones, especially in the video game industry.
+which is Portuguese for "Moon".
+
+> **Fun fact:** This is a word play, as Lua is a direct 
+> descendant of another computer language called Simple 
+> Object Language, or SOL for short, which, in turn, means 
+> "Sun" in Portuguese. The creators of Lua lived in Rio de 
+> Janeiro, Brazil and spoke Portuguese to one another. There 
+> are many versions of Lua; ours is called
+> [Lua 5.1](https://www.lua.org/manual/5.1/),
+> which is one of the most popular ones, especially in the
+> video game industry.
 
 When you turn on your Compy, after about a minute, it 
 brings up the Android home screen as its desktop, which is 
@@ -144,7 +132,7 @@ things will be back to normal.
 
 Now you know enough to start chatting with Compy.
 
-## The Basics of Lua
+## The Language Of The Machine
 
 If you try to greet the computer by typing `Hello Compy!`, 
 you will notice that what you are typing is displayed in 
@@ -187,7 +175,23 @@ on the canvas.
 > things were literally *print*ed. While this has no longer 
 > been the case for many decades now, the notation stuck.
 
-So let's try this: type `print(2+2)`. The word `print` is, 
+Here are a few more things that you can try out to see what 
+they do (type them in this order):
+
+```lua
+love.graphics.circle("fill", 200, 200, 100)
+gfx = love.graphics
+gfx.setColor(Color[2])
+gfx.circle("fill", 250, 200, 100)
+sfx = compy.audio
+sfx.beep()
+sfx.win()
+sfx.lose()
+gfx.clear()
+compy.terminal.clear()
+```
+
+Now let's try this: type `print(2+2)`. The word `print` is, 
 again, displayed in black. The parentheses and the plus 
 sign are dark blue. The twos are purple. If you hit **Enter**, 
 the computer dutifully writes `4` on the canvas.

@@ -32,6 +32,13 @@
             "italic": false,
             "underline": false
         },
+        "BuiltIn": {
+            "text-color": "#000080",
+            "background-color": null,
+            "bold": true,
+            "italic": false,
+            "underline": false
+        },
         "Char": {
             "text-color": "#4e9a06",
             "background-color": null,
@@ -110,7 +117,7 @@
             "underline": false
         },
         "Function": {
-            "text-color": "#000080",
+            "text-color": "#000000",
             "background-color": null,
             "bold": true,
             "italic": false,
@@ -132,6 +139,13 @@
         },
         "Keyword": {
             "text-color": "#0000c0",
+            "background-color": null,
+            "bold": true,
+            "italic": false,
+            "underline": false
+        },
+        "Normal": {
+            "text-color": "#000000",
             "background-color": null,
             "bold": true,
             "italic": false,

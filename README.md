@@ -176,11 +176,12 @@ on the canvas.
 > been the case for many decades now, the notation stuck.
 
 Here are a few more things that you can try out to see what 
-they do (type them in this order):
+they do (type them in this order). Compy gives you `gfx` as 
+a short name for `love.graphics`, so it is there already; 
+`sfx` is one you make yourself:
 
 ```lua
-love.graphics.circle("fill", 200, 200, 100)
-gfx = love.graphics
+gfx.circle("fill", 200, 200, 100)
 gfx.setColor(Color[2])
 gfx.circle("fill", 250, 200, 100)
 sfx = compy.audio
